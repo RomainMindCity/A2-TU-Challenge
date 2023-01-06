@@ -2,9 +2,9 @@ namespace TU_Challenge.Tests
 {
     /// <summary>
     /// Exercice 2, cette fois-ci on fait un peu d'algorythme jouant avec des boucles
-    /// Pour rendre les tests visible, tu dois passer le "#if false" à "#if true" ligne 7
+    /// Pour rendre les tests visible, tu dois passer le "#if false" ï¿½ "#if true" ligne 7
     /// </summary>
-#if false
+#if true
     public class Test2_Strings
     {
         [Test]
@@ -52,8 +52,8 @@ namespace TU_Challenge.Tests
         /// <param name="a"></param>
         /// <param name="expected"></param>
         [Test]
-        [TestCase("J'ai pas d'ORIGINALITÉ", "j'ai pas d'originalité")]
-        [TestCase("STAR WARS SURCOTÉ", "star wars surcoté")]
+        [TestCase("J'ai pas d'ORIGINALITï¿½", "j'ai pas d'originalitï¿½")]
+        [TestCase("STAR WARS SURCOTï¿½", "star wars surcotï¿½")]
         [TestCase("Don't BE mad bro :(", "don't be mad bro :(")]
         public void LowerCase(string a, string expected)
         {
@@ -73,14 +73,14 @@ namespace TU_Challenge.Tests
 
         [Test]
         [TestCase("IIM", "MII")]
-        [TestCase("HelloWorld", "dlrorWolleH")]
+        [TestCase("HelloWorld", "dlroWolleH")]
         public void Reverse(string a, string expected)
         {
-            string result = MyStringImplementation.Voyelles(a);
+            string result = MyStringImplementation.Reverse(a);
             Assert.That(result, Is.EqualTo(expected));
         }
 
-        /// On prend une lettre sur 2, arrivé au bout on prend les lettres sautés
+        /// On prend une lettre sur 2, arrivï¿½ au bout on prend les lettres sautï¿½s
         [TestCase("HelloWorld", "HloolelWrd")]
         public void BazardString(string input, string expected)
         {
@@ -88,7 +88,7 @@ namespace TU_Challenge.Tests
             Assert.That(result, Is.EqualTo(expected));
         }
 
-        /// Opération inverse au BazardString
+        /// Opï¿½ration inverse au BazardString
         [TestCase("HloolelWrd", "HelloWorld")]
         public void UnBazardString(string input, string expected)
         {
@@ -97,7 +97,7 @@ namespace TU_Challenge.Tests
         }
 
         /// <summary>
-        /// Bonus, non obligatoire pour aujourd'hui, pour comprendre le code de césar : 
+        /// Bonus, non obligatoire pour aujourd'hui, pour comprendre le code de cï¿½sar : 
         /// https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage
         /// https://www.dcode.fr/chiffre-cesar
         /// </summary>
